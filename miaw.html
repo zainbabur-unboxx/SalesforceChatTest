@@ -1,19 +1,22 @@
-<script type='text/javascript'>
-	function initEmbeddedMessaging() {
-		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+<body>
+	<h1>MIAW External</h1>
+	<script type='text/javascript'>
+		function initEmbeddedMessaging() {
+			try {
+				embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
-			embeddedservice_bootstrap.init(
-				'00DVZ000000IpTt',
-				'AgentForce',
-				'https://cmfgroup--uat.sandbox.my.site.com/ESWAgentForce1742830709477',
-				{
-					scrt2URL: 'https://cmfgroup--uat.sandbox.my.salesforce-scrt.com'
-				}
-			);
-		} catch (err) {
-			console.error('Error loading Embedded Messaging: ', err);
-		}
-	};
-</script>
-<script type='text/javascript' src='https://cmfgroup--uat.sandbox.my.site.com/ESWAgentForce1742830709477/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+				embeddedservice_bootstrap.init(
+					'00D7i000000XeuW',
+					'AgentForce',
+					'https://cmfgroup--syfiedev2.sandbox.my.site.com/ESWAgentForce1735222522406',
+					{
+						scrt2URL: 'https://cmfgroup--syfiedev2.sandbox.my.salesforce-scrt.com'
+					}
+				);
+			} catch (err) {
+				console.error('Error loading Embedded Messaging: ', err);
+			}
+		};
+	</script>
+	<script type='text/javascript' src='https://cmfgroup--syfiedev2.sandbox.my.site.com/ESWAgentForce1735222522406/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+</body>
