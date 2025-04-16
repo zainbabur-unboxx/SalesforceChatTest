@@ -1,43 +1,252 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-		<!-- //Custom event for launching MIAW chat -->
-		<script>
-    		document.addEventListener('launchMIAWChat', function(e){	
-        	embeddedservice_bootstrap.utilAPI.launchChat();
-    	});
-		</script>
+        <style>
+            .embeddedServiceInvitation {
+                background: #FFFFFF;
+                max-width: 16.875rem;
+                max-height: 13.125rem;
+                box-shadow: 0 0.4375rem 0.75rem rgba(0, 0, 0, 0.1);
+                border-radius: 0.5rem;
+                position: fixed;
+                bottom: 6.25rem;
+                right: 1.25rem;
+                z-index: 1000;
+                display: block;
+                opacity: 0;
+                transform: translateX(100%);
+                transition: transform 0.6s ease, opacity 0.6s ease;
+            }
+
+            .embeddedServiceInvitation.show {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            .embeddedServiceInvitation > .embeddedServiceInvitationBody {
+                background-color: #FFFFFF;
+                max-height: 6.875rem;
+                min-width: 16.25rem;
+                margin: 0 0.5rem;
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+                overflow: auto;
+            }
+
+            .embeddedServiceInvitationBody .embeddedServiceInvitationBodyText {
+                color: #333333;
+                padding: 0.5rem !important;
+                margin: 0.75rem 0 !important;
+            }
+
+            .embeddedServiceInvitation > .embeddedServiceInvitationHeader {
+                width: inherit;
+                line-height: 2rem;
+                padding: 0.625rem;
+                color: #FFFFFF;
+                background-color: #C41E3A;
+                display: flex;
+                justify-content: space-between;
+                align-items: stretch;
+                border-top-left-radius: 0.5rem;
+                border-top-right-radius: 0.5rem;
+            }
+
+            .embeddedServiceInvitationHeader .avatar {
+                width: 2rem;
+                height: 2rem;
+                border-radius: 50%;
+            }
+
+            .embeddedServiceInvitationHeader .embeddedServiceTitleText {
+                font-size: 1.125rem;
+                color: #FFFFFF;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                flex-grow: 1;
+                max-width: 100%;
+                margin: 0 0.75rem;
+            }
+
+            .embeddedServiceInvitationHeader .embeddedServiceCloseIcon {
+                border: none;
+                border-radius: 0.2rem;
+                cursor: pointer;
+                background-color: transparent;
+                width: 2rem;
+                height: 2rem;
+                font-size: 1.25rem;
+                color: #FFFFFF;
+                position: relative;
+                bottom: 3%;
+            }
+
+            .embeddedServiceInvitationHeader .embeddedServiceCloseIcon:focus {
+                outline: none;
+            }
+
+            .embeddedServiceInvitationHeader .embeddedServiceCloseIcon:focus::before {
+                content: " ";
+                position: absolute;
+                top: 11%;
+                left: 7%;
+                width: 85%;
+                height: 85%;
+                background-color: rgba(0, 0, 0, 0.1);
+                opacity: 0.2;
+                border-radius: 0.25rem;
+                pointer-events: none;
+            }
+
+            .embeddedServiceInvitationHeader .embeddedServiceCloseIcon:hover {
+                background-color: #FFFFFF;
+                color: #333333;
+                opacity: 0.7;
+            }
+
+            .embeddedServiceInvitation > .embeddedServiceInvitationFooter {
+                width: inherit;
+                color: #FFFFFF;
+                text-align: center;
+                background-color: #FFFFFF;
+                padding: 0.75rem;
+                border-bottom-left-radius: 0.5rem;
+                border-bottom-right-radius: 0.5rem;
+            }
+
+            .embeddedServiceInvitationFooter > .embeddedServiceActionButton {
+                min-width: 7rem;
+                font-size: 0.875rem !important;
+                max-height: 2.5rem;
+                border: none;
+                border-radius: 1.5rem;
+                padding: 0.625rem !important;
+                margin: 0.25rem;
+                text-align: center;
+                cursor: pointer;
+            }
+
+            .embeddedServiceInvitationFooter > .start {
+                background-color: #0070D2;
+                color: #FFFFFF;
+            }
+
+            .embeddedServiceInvitationFooter > .close {
+                background-color: #C41E3A;
+                color: #FFFFFF;
+            }
+
+            @media only screen and (max-width: 767px) {
+                .embeddedServiceInvitation {
+                    max-width: 16.875rem;
+                    max-height: 11.875rem;
+                    margin-top: -31.25rem !important;
+                    top: 115%;
+                    background: #FFFFFF;
+                }
+
+                .embeddedServiceInvitationBody .embeddedServiceInvitationBodyText {
+                    color: #333333 !important;
+                    padding: 0.5rem !important;
+                    margin: 0.25rem 0 !important;
+                }
+
+                .embeddedServiceInvitation > .embeddedServiceInvitationBody {
+                    min-width: 11.25rem;
+                }
+
+                .embeddedServiceInvitationHeader .embeddedServiceTitleText {
+                    font-size: 0.875rem;
+                }
+
+                .embeddedServiceInvitationFooter .embeddedServiceActionButton {
+                    font-size: 0.75rem;
+                    padding: 0.5rem;
+                }
+            }
+        </style>
     </head>
     <body>
         <h1>Test Agentforce External</h1>
-            <script type='text/javascript'>
-                // Add event listener for embedded messaging ready state
-                window.addEventListener("onEmbeddedMessagingReady", function() {
-                    console.log("Embedded Messaging is ready! - Latest version with direct API call");
-                    // Add a delay before attempting to launch chat
-                    setTimeout(() => {
-                        console.log("Attempting to launch chat directly via API...");
-                        embeddedservice_bootstrap.utilAPI.launchChat();
-                    }, 2000); // 2 second delay
-                });
 
-            	function initEmbeddedMessaging() {
-            		try {
-            			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-            
-            			embeddedservice_bootstrap.init(
-            				'00D7i000000XeuW',
-            				'Agentforce_Test_External',
-            				'https://cmfgroup--syfiedev2.sandbox.my.site.com/ESWAgentforceTestExtern1744726153455',
-            				{
-            					scrt2URL: 'https://cmfgroup--syfiedev2.sandbox.my.salesforce-scrt.com'
-            				}
-            			);
-            		} catch (err) {
-            			console.error('Error loading Embedded Messaging: ', err);
-            		}
-            	};
-            </script>
-            <script type='text/javascript' src='https://cmfgroup--syfiedev2.sandbox.my.site.com/ESWAgentforceTestExtern1744726153455/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-        </body>
+        <!-- Chat Invitation Popup -->
+        <div id="chatInvitation" class="embeddedServiceInvitation">
+            <div class="embeddedServiceInvitationHeader">
+                <img class="avatar" src="https://cmfgroup--syfiedev2.sandbox.my.site.com/ESWAgentforceTestExtern1744726153455/assets/images/avatar.png" alt="Customer Service Agent" />
+                <div class="embeddedServiceTitleText">Need help?</div>
+                <button class="embeddedServiceCloseIcon" onclick="handleCloseClick()">&times;</button>
+            </div>
+
+            <div class="embeddedServiceInvitationBody">
+                <p class="embeddedServiceInvitationBodyText">Start a chat to connect with our team during business hours or explore self-service options anytime!</p>
+            </div>
+
+            <div class="embeddedServiceInvitationFooter">
+                <button class="embeddedServiceActionButton close" onclick="handleCloseClick()">Close</button>
+                <button class="embeddedServiceActionButton start" onclick="handleStartChatClick()">Start Chat</button>
+            </div>
+        </div>
+
+        <script type='text/javascript'>
+            let chatClicked = false;
+            const POPUP_DELAY = 2000; // 2 seconds, adjust if needed
+
+            function showChatInvitation() {
+                const invitation = document.getElementById('chatInvitation');
+                invitation.classList.add('show');
+            }
+
+            function hideChatInvitation() {
+                const invitation = document.getElementById('chatInvitation');
+                invitation.classList.remove('show');
+            }
+
+            function handleChatStart() {
+                chatClicked = true;
+                hideChatInvitation();
+            }
+
+            function handleStartChatClick() {
+                embeddedservice_bootstrap.utilAPI.launchChat();
+                handleChatStart();
+            }
+
+            function handleCloseClick() {
+                hideChatInvitation();
+            }
+
+            // Add event listener for embedded messaging ready state
+            window.addEventListener("onEmbeddedMessagingReady", function() {
+                console.log("Embedded Messaging is ready!");
+                setTimeout(() => {
+                    if (!chatClicked) {
+                        console.log("Showing chat invitation...");
+                        showChatInvitation();
+                    }
+                }, POPUP_DELAY);
+            });
+
+            window.addEventListener("onEmbeddedMessagingButtonClicked", handleChatStart);
+            window.addEventListener("onEmbeddedMessagingConversationOpened", handleChatStart);
+
+            function initEmbeddedMessaging() {
+                try {
+                    embeddedservice_bootstrap.settings.language = 'en_US';
+        
+                    embeddedservice_bootstrap.init(
+                        '00D7i000000XeuW',
+                        'Agentforce_Test_External',
+                        'https://cmfgroup--syfiedev2.sandbox.my.site.com/ESWAgentforceTestExtern1744726153455',
+                        {
+                            scrt2URL: 'https://cmfgroup--syfiedev2.sandbox.my.salesforce-scrt.com'
+                        }
+                    );
+                } catch (err) {
+                    console.error('Error loading Embedded Messaging: ', err);
+                }
+            };
+        </script>
+        <script type='text/javascript' src='https://cmfgroup--syfiedev2.sandbox.my.site.com/ESWAgentforceTestExtern1744726153455/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+    </body>
 </html>
