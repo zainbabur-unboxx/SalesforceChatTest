@@ -13,11 +13,11 @@
             <script type='text/javascript'>
                 // Add event listener for embedded messaging ready state
                 window.addEventListener("onEmbeddedMessagingReady", function() {
-                    console.log("Embedded Messaging is ready!");
+                    console.log("Embedded Messaging is ready! - Latest version with direct API call");
                     // Add a delay before attempting to launch chat
                     setTimeout(() => {
-                        console.log("Attempting to launch chat...");
-                        document.dispatchEvent(new Event('launchMIAWChat'));
+                        console.log("Attempting to launch chat directly via API...");
+                        embeddedservice_bootstrap.utilAPI.launchChat();
                     }, 2000); // 2 second delay
                 });
 
