@@ -14,8 +14,11 @@
                 // Add event listener for embedded messaging ready state
                 window.addEventListener("onEmbeddedMessagingReady", function() {
                     console.log("Embedded Messaging is ready!");
-                    // Dispatch the custom event when messaging is ready
-                    document.dispatchEvent(new Event('launchMIAWChat'));
+                    // Add a delay before attempting to launch chat
+                    setTimeout(() => {
+                        console.log("Attempting to launch chat...");
+                        document.dispatchEvent(new Event('launchMIAWChat'));
+                    }, 2000); // 2 second delay
                 });
 
             	function initEmbeddedMessaging() {
