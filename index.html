@@ -5,6 +5,11 @@
     <body>
         <h1>Test Agentforce External</h1>
             <script type='text/javascript'>
+                // Add event listener for embedded messaging ready state
+                window.addEventListener("onEmbeddedMessagingReady", function() {
+                    console.log("Embedded Messaging is ready!");
+                });
+
             	function initEmbeddedMessaging() {
             		try {
             			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
