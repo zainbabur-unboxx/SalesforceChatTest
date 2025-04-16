@@ -3,10 +3,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
         <style>
             .embeddedServiceInvitation {
-                background: #FFFFFF;
+                background: #ffffff; /* --clr-neutral-fff */
                 max-width: 16.875rem;
                 max-height: 13.125rem;
-                box-shadow: 0 0.4375rem 0.75rem rgba(0, 0, 0, 0.1);
+                box-shadow: 0 0.4375rem 0.75rem #dcdcdf; /* --clr-neutral-300 */
                 border-radius: 0.5rem;
                 position: fixed;
                 bottom: 6.25rem;
@@ -24,17 +24,17 @@
             }
 
             .embeddedServiceInvitation > .embeddedServiceInvitationBody {
-                background-color: #FFFFFF;
+                background-color: #ffffff; /* --clr-neutral-fff */
                 max-height: 6.875rem;
                 min-width: 16.25rem;
                 margin: 0 0.5rem;
-                font-size: 0.875rem;
+                font-size: 0.875rem; /* --fs-300 */
                 line-height: 1.25rem;
                 overflow: auto;
             }
 
             .embeddedServiceInvitationBody .embeddedServiceInvitationBodyText {
-                color: #333333;
+                color: #2a3541; /* --clr-neutral */
                 padding: 0.5rem !important;
                 margin: 0.75rem 0 !important;
             }
@@ -43,8 +43,8 @@
                 width: inherit;
                 line-height: 2rem;
                 padding: 0.625rem;
-                color: #FFFFFF;
-                background-color: #C41E3A;
+                color: #ffffff; /* --clr-neutral-fff */
+                background-color: #f24740; /* --clr-error */
                 display: flex;
                 justify-content: space-between;
                 align-items: stretch;
@@ -59,8 +59,8 @@
             }
 
             .embeddedServiceInvitationHeader .embeddedServiceTitleText {
-                font-size: 1.125rem;
-                color: #FFFFFF;
+                font-size: 1.25rem; /* --fs-500 */
+                color: #ffffff; /* --clr-neutral-fff */
                 overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
@@ -76,8 +76,8 @@
                 background-color: transparent;
                 width: 2rem;
                 height: 2rem;
-                font-size: 1.25rem;
-                color: #FFFFFF;
+                font-size: 1.5rem; /* --fs-600 */
+                color: #ffffff; /* --clr-neutral-fff */
                 position: relative;
                 bottom: 3%;
             }
@@ -93,23 +93,23 @@
                 left: 7%;
                 width: 85%;
                 height: 85%;
-                background-color: rgba(0, 0, 0, 0.1);
+                background-color: #dcdcdf; /* --clr-neutral-300 */
                 opacity: 0.2;
                 border-radius: 0.25rem;
                 pointer-events: none;
             }
 
             .embeddedServiceInvitationHeader .embeddedServiceCloseIcon:hover {
-                background-color: #FFFFFF;
-                color: #333333;
+                background-color: #ffffff; /* --clr-neutral-fff */
+                color: #2a3541; /* --clr-neutral */
                 opacity: 0.7;
             }
 
             .embeddedServiceInvitation > .embeddedServiceInvitationFooter {
                 width: inherit;
-                color: #FFFFFF;
+                color: #ffffff; /* --clr-neutral-fff */
                 text-align: center;
-                background-color: #FFFFFF;
+                background-color: #ffffff; /* --clr-neutral-fff */
                 padding: 0.75rem;
                 border-bottom-left-radius: 0.5rem;
                 border-bottom-right-radius: 0.5rem;
@@ -117,7 +117,7 @@
 
             .embeddedServiceInvitationFooter > .embeddedServiceActionButton {
                 min-width: 7rem;
-                font-size: 0.875rem !important;
+                font-size: 0.875rem !important; /* --fs-300 */
                 max-height: 2.5rem;
                 border: none;
                 border-radius: 1.5rem;
@@ -128,13 +128,13 @@
             }
 
             .embeddedServiceInvitationFooter > .start {
-                background-color: #0070D2;
-                color: #FFFFFF;
+                background-color: #106398; /* --clr-primary */
+                color: #ffffff; /* --clr-neutral-fff */
             }
 
             .embeddedServiceInvitationFooter > .close {
-                background-color: #C41E3A;
-                color: #FFFFFF;
+                background-color: #f24740; /* --clr-error */
+                color: #ffffff; /* --clr-neutral-fff */
             }
 
             @media only screen and (max-width: 767px) {
@@ -143,11 +143,11 @@
                     max-height: 11.875rem;
                     margin-top: -31.25rem !important;
                     top: 115%;
-                    background: #FFFFFF;
+                    background: #ffffff; /* --clr-neutral-fff */
                 }
 
                 .embeddedServiceInvitationBody .embeddedServiceInvitationBodyText {
-                    color: #333333 !important;
+                    color: #2a3541 !important; /* --clr-neutral */
                     padding: 0.5rem !important;
                     margin: 0.25rem 0 !important;
                 }
@@ -157,11 +157,11 @@
                 }
 
                 .embeddedServiceInvitationHeader .embeddedServiceTitleText {
-                    font-size: 0.875rem;
+                    font-size: 0.875rem; /* --fs-300 */
                 }
 
                 .embeddedServiceInvitationFooter .embeddedServiceActionButton {
-                    font-size: 0.75rem;
+                    font-size: 0.75rem; /* --fs-200 */
                     padding: 0.5rem;
                 }
             }
