@@ -214,6 +214,11 @@
             function handleStartChatClick() {
                 embeddedservice_bootstrap.utilAPI.launchChat();
                 handleChatStart();
+                setTimeout(() => {
+                    embeddedservice_bootstrap.userVerificationAPI.clearSession(true).then(() => {
+                          embeddedservice_bootstrap.utilAPI.removeAllComponents()
+                    });
+                }, POPUP_DELAY);
             }
 
             function handleCloseClick() {
