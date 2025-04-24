@@ -111,21 +111,21 @@
 	});
 
         embedded_svc.init(
-          'https://cmfgroup.my.salesforce.com',
-          'https://access.cmfgroup.com/',
-          gslbBaseURL,
-          '00D41000000Wge4',
-          'Chat_Team',
-          {
-            baseLiveAgentContentURL: 'https://c.la1-core1.sfdc-8tgtt5.salesforceliveagent.com/content',
-            deploymentId: '572Vn0000003PQ5',
-            buttonId: '573Vn0000002HZR',
-            baseLiveAgentURL: 'https://d.la1-core1.sfdc-8tgtt5.salesforceliveagent.com/chat',
-            eswLiveAgentDevName: 'Chat_Team',
-            isOfflineSupportEnabled: false
-          }
+            'https://cmfgroup--uat.sandbox.my.salesforce.com',
+            'https://cmfgroup--uat.sandbox.my.site.com/',
+            gslbBaseURL,
+            '00DVZ000000IpTt',
+            'Chat_Team',
+            {
+                baseLiveAgentContentURL: 'https://c.la12s-core1.sfdc-8tgtt5.salesforceliveagent.com/content',
+                deploymentId: '572VZ000000Gxyc',
+                buttonId: '573VZ0000006khh',
+                baseLiveAgentURL: 'https://d.la12s-core1.sfdc-8tgtt5.salesforceliveagent.com/chat',
+                eswLiveAgentDevName: 'Chat_Team',
+                isOfflineSupportEnabled: false
+            }
         );
-
+	      
         embedded_svc.addEventHandler("afterMinimize", function () {
           window.parent.postMessage({
             isChatFrame: true,
@@ -148,16 +148,16 @@
         });
       };
 
-      if (!window.embedded_svc) {
+    if (!window.embedded_svc) {
         var s = document.createElement('script');
-        s.setAttribute('src', 'https://cmfgroup.my.salesforce.com/embeddedservice/5.0/esw.min.js');
-        s.onload = function () {
-          initESW(null);
+        s.setAttribute('src', 'https://cmfgroup--uat.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+        s.onload = function() {
+            initESW(null);
         };
         document.body.appendChild(s);
-      } else {
+    } else {
         initESW('https://service.force.com');
-      }
+    }
     </script>
   </body>
 
