@@ -1,309 +1,174 @@
 <body>
 <style type='text/css'>
     .embeddedServiceHelpButton .helpButton .uiButton {
-        background-color: #FF0F17;
-        /*font-family: "Arial", sans-serif;*/
-        /*overflow: unset !important;*/
-        box-shadow: none !important;    
+      background-color: #FF0F17;
+      font-family: "Arial", sans-serif;
     }
 
     .embeddedServiceHelpButton .uiButton {
-        min-width: unset;
-        max-width: unset;
-        width: 3.125rem !important;
-        height: 3.125rem !important;
-        border-radius: 50% !important;
-        padding: 0 1rem !important;
+      min-width: unset;
+      max-width: unset;
+      width: 50px !important;
+      height: 50px !important;
+      border-radius: 50% !important;
+      padding: 0px 16px !important;
     }
-    
+	
     .embeddedServiceHelpButton .helpButton {
-        bottom: 0.75rem !important;
-        right: 1rem !important;
+      bottom: 12px !important;
+      right: 16px !important;
     }
-
-    .embeddedServiceHelpButton .helpButton .helpButtonEnabled:hover::before,
-    .embeddedServiceHelpButton .helpButton .helpButtonEnabled:focus::before {
-        border-radius: unset;
-        background-color: unset;
-        opacity: unset;
+    .embeddedServiceHelpButton .helpButton .uiButton{
+      overflow: unset !important;
+      box-shadow: none !important;    
     }
-
-    .embeddedServiceHelpButton .embeddedServiceIcon {
-        display: inline-block !important;
-    }
-
+   .embeddedServiceHelpButton .helpButton .helpButtonEnabled:hover::before, .embeddedServiceHelpButton .helpButton .helpButtonEnabled:focus::before {
+      border-radius: unset;
+      background-color: unset;
+      opacity: unset;
+   }	
+   .embeddedServiceHelpButton .embeddedServiceIcon {
+	    display: inline-block !important;
+   }
     .salesforceIdentityLoginBody2 .ui-widget {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
+      padding-top: 0px !important;
+      padding-bottom: 0px !important;
     }
-
     .embeddedServiceSidebarMinimizedDefaultUI.minimizedContainer:hover,
     .embeddedServiceSidebarMinimizedDefaultUI.minimizedContainer:focus {
-        background-color: #FF0F17 !important;
+      background-color: #FF0F17 !important;
     }
-
     .embeddedServiceSidebarMinimizedDefaultUI .content {
-        position: absolute;
-        top: -3.75rem;
-        right: 1.375rem;
-        background-color: white !important;
-        border-radius: 0.1875rem;
-        box-shadow: 0 0 0.3125rem 0.3125rem rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: -60px;
+      right: 22px;
+      background-color: white !important;
+      border-radius: 3px;
+      box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
     }
-
     .embeddedServiceSidebarMinimizedDefaultUI .message {
-        color: #2a3541;
-        font-family: 'Museo Sans';
-        font-weight: 600;
-        width: max-content !important;
+      color: #2a3541;
+      font-family: 'Museo Sans';
+      font-weight: 600;
+      width: max-content !important;
     }
-
     .embeddedServiceSidebarMinimizedDefaultUI,
     .forceCommunityEmbeddedServiceHelpButton .flatButton {
-        font-family: "Arial", sans-serif;
-        width: 3.125rem !important;
-        height: 3.125rem !important;
-        border-radius: 50% !important;
-        padding: 0 1rem !important;
+      font-family: "Arial", sans-serif;
+      width: 50px !important;
+      height: 50px !important;
+      border-radius: 50% !important;
+      padding: 0px 16px !important;
     }
-
     .embeddedServiceSidebarMinimizedDefaultUI {
-        min-height: unset !important;
-        min-width: unset !important;
-        border: 0;
-        bottom: 0.75rem !important;
-        overflow: unset !important;
-        box-shadow: none !important;
-        background-color: #FF0F17 !important;
+      min-height: unset !important;
+      min-width: unset !important;
+      border: 0px;
+      bottom: 12px !important;
+      overflow: unset !important;
+      box-shadow: none !important;
+      background-color: #FF0F17 !important;
     }
-
     .forceCommunityEmbeddedServiceHelpButton .flatButton {
-        background-color: #FF0F17 !important;
+      background-color: #FF0F17 !important;
     }
 </style>
 
 <!-- Start of Invitations -->
 <div class="embeddedServiceInvitation" id="snapins_invite" inert="true" aria-live="assertive" role="dialog" aria-atomic="true">
-    <div class="embeddedServiceInvitationHeader" aria-labelledby="snapins_titletext" aria-describedby="snapins_bodytext">
-        <img id="embeddedServiceAvatar"></img>
-        <span class="embeddedServiceTitleText" id="snapins_titletext">Need help?</span>
-        <button type="button" id="closeInvite" class="embeddedServiceCloseIcon" aria-label="Exit invitation">&times;</button>
-    </div>
-    <div class="embeddedServiceInvitationBody">
-        <p id="snapins_bodytext">How can we help you?</p>
-    </div>
-    <div class="embeddedServiceInvitationFooter" aria-describedby="snapins_bodytext">
-        <button type="button" class="embeddedServiceActionButton" id="rejectInvite">Close</button>
-        <button type="button" class="embeddedServiceActionButton" id="acceptInvite">Start Chat</button>
-    </div>
+	<div class="embeddedServiceInvitationHeader" aria-labelledby="snapins_titletext" aria-describedby="snapins_bodytext">
+		<img id="embeddedServiceAvatar"></img>
+		<span class="embeddedServiceTitleText" id="snapins_titletext">Need help?</span>
+		<button type="button" id="closeInvite" class="embeddedServiceCloseIcon" aria-label="Exit invitation">&times;</button>
+	</div>
+	<div class="embeddedServiceInvitationBody">
+		<p id="snapins_bodytext">How can we help you?</p>
+	</div>
+	<div class="embeddedServiceInvitationFooter" aria-describedby="snapins_bodytext">
+		<button type="button" class="embeddedServiceActionButton" id="rejectInvite">Close</button>
+		<button type="button" class="embeddedServiceActionButton" id="acceptInvite">Start Chat</button>
+	</div>
 </div>
 
 <style type='text/css'>
-    #snapins_invite {
-        background-color: #FFFFFF;
-        font-family: "Arial", sans-serif;
-        overflow: visible;
-        border-radius: 0.5rem;
-        visibility: hidden;
-    }
-
-    .embeddedServiceInvitation {
-        background-color: transparent;
-        max-width: 18.125rem;
-        max-height: 13.125rem;
-        -webkit-box-shadow: 0 0.4375rem 0.75rem rgba(0,0,0,0.28);
-        -moz-box-shadow: 0 0.4375rem 0.75rem rgba(0,0,0,0.28);
-        box-shadow: 0 0.4375rem 0.75rem rgba(0,0,0,0.28);
-    }
-
-    @media only screen and (min-width: 48em) {
-        .embeddedServiceInvitation {
-            max-width: 20.75rem;
-            max-height: 13.125rem;
-        }
-    }
-
-    .embeddedServiceInvitation > .embeddedServiceInvitationHeader {
-        width: inherit;
-        height: 2rem;
-        line-height: 2rem;
-        padding: 0.625rem;
-        color: #FFFFFF;
-        background-color: #14B590;
-        overflow: initial;
-        display: flex;
-        justify-content: space-between;
-        align-items: stretch;
-        border-top-left-radius: 0.5rem;
-        border-top-right-radius: 0.5rem;
-    }
-
-    .embeddedServiceInvitationHeader #embeddedServiceAvatar {
-        width: 2rem;
-        height: 2rem;
-        border-radius: 50%;
-    }
-
-    .embeddedServiceInvitationHeader .embeddedServiceTitleText {
-        font-size: 1.125rem;
-        color: #FFFFFF;
-        overflow: hidden;
-        word-wrap: normal;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        align-self: stretch;
-        flex-grow: 1;
-        max-width: 100%;
-        margin: 0 0.75rem;
-    }
-
-    .embeddedServiceInvitationHeader .embeddedServiceCloseIcon {
-        border: none;
-        border-radius: 0.1875rem;
-        cursor: pointer;
-        position: relative;
-        bottom: 3%;
-        background-color: transparent;
-        width: 2rem;
-        height: 2rem;
-        font-size: 1.4375rem;
-        color: #FFFFFF;
-    }
-
-    .embeddedServiceInvitationHeader .embeddedServiceCloseIcon:focus {
-        outline: none;
-    }
-
-    .embeddedServiceInvitationHeader .embeddedServiceCloseIcon:focus::before {
-        content: " ";
-        position: absolute;
-        top: 11%;
-        left: 7%;
-        width: 85%;
-        height: 85%;
-        background-color: rgba(255, 255, 255, 0.2);
-        border-radius: 0.25rem;
-        pointer-events: none;
-    }
-
-    .embeddedServiceInvitationHeader .embeddedServiceCloseIcon:active,
-    .embeddedServiceCloseIcon:hover {
-        background-color: #FFFFFF;
-        color: rgba(0,0,0,0.7);
-        opacity: 0.7;
-    }
-
-    .embeddedServiceInvitation > .embeddedServiceInvitationBody {
-        background-color: #FFFFFF;
-        max-height: 6.875rem;
-        min-width: 16.25rem;
-        margin: 0 0.5rem;
-        font-size: 0.875rem;
-        line-height: 1.25rem;
-        overflow: auto;
-    }
-
-    .embeddedServiceInvitationBody p {
-        color: #333333;
-        padding: 0.5rem;
-        margin: 0.75rem 0;
-    }
-
-    .embeddedServiceInvitation > .embeddedServiceInvitationFooter {
-        width: inherit;
-        color: #FFFFFF;
-        text-align: right;
-        background-color: #FFFFFF;
-        padding: 0.625rem;
-        max-height: 3.125rem;
-        border-bottom-left-radius: 0.5rem;
-        border-bottom-right-radius: 0.5rem;
-    }
-
-    .embeddedServiceInvitationFooter > .embeddedServiceActionButton {
-        font-size: 0.875rem;
-        max-height: 2.5rem;
-        border: none;
-        border-radius: 0.25rem;
-        padding: 0.625rem;
-        margin: 0.25rem;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        cursor: pointer;
-    }
-
-    .embeddedServiceInvitationFooter > #acceptInvite {
-        background-color: #2574A9;
-        color: #FFFFFF;
-    }
-
-    .embeddedServiceInvitationFooter > #rejectInvite {
-        background-color: #FFFFFF;
-        color: #2574A9;
-    }
+	#snapins_invite { background-color: #FFFFFF; font-family: "Arial", sans-serif; overflow: visible; border-radius: 8px; visibility: hidden; }
+	.embeddedServiceInvitation { background-color: transparent; max-width: 290px; max-height: 210px; -webkit-box-shadow: 0 7px 12px rgba(0,0,0,0.28); -moz-box-shadow: 0 7px 12px rgba(0,0,0,0.28); box-shadow: 0 7px 12px rgba(0,0,0,0.28); }
+	@media only screen and (min-width: 48em) { /*mobile*/ .embeddedServiceInvitation { max-width: 332px; max-height: 210px; } }
+	.embeddedServiceInvitation > .embeddedServiceInvitationHeader { width: inherit; height: 32px; line-height: 32px; padding: 10px; color: #FFFFFF; background-color: #14B590; overflow: initial; display: flex; justify-content: space-between; align-items: stretch; border-top-left-radius: 8px; border-top-right-radius: 8px; }
+	.embeddedServiceInvitationHeader #embeddedServiceAvatar { width: 32px; height: 32px; border-radius: 50%; }
+	.embeddedServiceInvitationHeader .embeddedServiceTitleText { font-size: 18px; color: #FFFFFF; overflow: hidden; word-wrap: normal; white-space: nowrap; text-overflow: ellipsis; align-self: stretch; flex-grow: 1; max-width: 100%; margin: 0 12px; }
+	.embeddedServiceInvitationHeader .embeddedServiceCloseIcon { border: none; border-radius: 3px; cursor: pointer; position: relative; bottom: 3%; background-color: transparent; width: 32px; height: 32px; font-size: 23px; color: #FFFFFF; }
+	.embeddedServiceInvitationHeader .embeddedServiceCloseIcon:focus { outline: none; }
+	.embeddedServiceInvitationHeader .embeddedServiceCloseIcon:focus::before { content: " "; position: absolute; top: 11%; left: 7%; width: 85%; height: 85%; background-color: rgba(255, 255, 255, 0.2); border-radius: 4px; pointer-events: none; }
+	.embeddedServiceInvitationHeader .embeddedServiceCloseIcon:active, .embeddedServiceCloseIcon:hover { background-color: #FFFFFF; color: rgba(0,0,0,0.7); opacity: 0.7; }
+	.embeddedServiceInvitation > .embeddedServiceInvitationBody { background-color: #FFFFFF; max-height: 110px; min-width: 260px; margin: 0 8px; font-size: 14px; line-height: 20px; overflow: auto; }
+	.embeddedServiceInvitationBody p { color: #333333; padding: 8px; margin: 12px 0; }
+	.embeddedServiceInvitation > .embeddedServiceInvitationFooter { width: inherit; color: #FFFFFF; text-align: right; background-color: #FFFFFF; padding: 10px; max-height: 50px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; }
+	.embeddedServiceInvitationFooter > .embeddedServiceActionButton { font-size: 14px; max-height: 40px; border: none; border-radius: 4px; padding: 10px; margin: 4px; text-align: center; text-decoration: none; display: inline-block; cursor: pointer; }
+	.embeddedServiceInvitationFooter > #acceptInvite { background-color: #2574A9; color: #FFFFFF; }
+	.embeddedServiceInvitationFooter > #rejectInvite { background-color: #FFFFFF; color: #2574A9; }
 </style>
 
 <script type='text/javascript'>
-    (function() {
-        document.getElementById('closeInvite').onclick = function() { embedded_svc.inviteAPI.inviteButton.rejectInvite(); };
-        document.getElementById('rejectInvite').onclick = function() { embedded_svc.inviteAPI.inviteButton.rejectInvite(); }; // use this API call to reject invitations
-        document.getElementById('acceptInvite').onclick = function() { embedded_svc.inviteAPI.inviteButton.acceptInvite(); }; // use this API call to start chat from invitations
-        document.addEventListener('keyup', function(event) { if (event.keyCode == 27) { embedded_svc.inviteAPI.inviteButton.rejectInvite(); }})
-    })();
+	(function() {
+		document.getElementById('closeInvite').onclick = function() { embedded_svc.inviteAPI.inviteButton.rejectInvite(); };
+		document.getElementById('rejectInvite').onclick = function() { embedded_svc.inviteAPI.inviteButton.rejectInvite(); }; // use this API call to reject invitations
+		document.getElementById('acceptInvite').onclick = function() { embedded_svc.inviteAPI.inviteButton.acceptInvite(); }; // use this API call to start chat from invitations
+		document.addEventListener('keyup', function(event) { if (event.keyCode == 27) { embedded_svc.inviteAPI.inviteButton.rejectInvite(); }})
+	})();
 </script>
 <!-- End of Invitations -->
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
-    var initESW = function(gslbBaseURL) {
-        embedded_svc.settings.displayHelpButton = true; //Or false
-        embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+	var initESW = function(gslbBaseURL) {
+		embedded_svc.settings.displayHelpButton = true; //Or false
+		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
-        //embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
-        //embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
+		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
+		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
 
-        //embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
-        //embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+		//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
+		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
 
-        // Settings for Chat
-        //embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
-            // Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
-            // Returns a valid button ID.
-        //};
-        //embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
-        //embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
-        //embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+		// Settings for Chat
+		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
+			// Returns a valid button ID.
+		//};
+		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
+		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
+		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
 
-        embedded_svc.settings.enabledFeatures = ['LiveAgent'];
-        embedded_svc.settings.entryFeature = 'LiveAgent';
+		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+		embedded_svc.settings.entryFeature = 'LiveAgent';
 
-        embedded_svc.init(
-            'https://cmfgroup--uat.sandbox.my.salesforce.com',
-            'https://cmfgroup--uat.sandbox.my.site.com/',
-            gslbBaseURL,
-            '00DVZ000000IpTt',
-            'Chat_Team',
-            {
-                baseLiveAgentContentURL: 'https://c.la12s-core1.sfdc-8tgtt5.salesforceliveagent.com/content',
-                deploymentId: '572VZ000000Gxyc',
-                buttonId: '573VZ0000006khh',
-                baseLiveAgentURL: 'https://d.la12s-core1.sfdc-8tgtt5.salesforceliveagent.com/chat',
-                eswLiveAgentDevName: 'Chat_Team',
-                isOfflineSupportEnabled: false
-            }
-        );
-    };
+		embedded_svc.init(
+			'https://cmfgroup--uat.sandbox.my.salesforce.com',
+			'https://cmfgroup--uat.sandbox.my.site.com/',
+			gslbBaseURL,
+			'00DVZ000000IpTt',
+			'Chat_Team',
+			{
+				baseLiveAgentContentURL: 'https://c.la12s-core1.sfdc-8tgtt5.salesforceliveagent.com/content',
+				deploymentId: '572VZ000000Gxyc',
+				buttonId: '573VZ0000006khh',
+				baseLiveAgentURL: 'https://d.la12s-core1.sfdc-8tgtt5.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'Chat_Team',
+				isOfflineSupportEnabled: false
+			}
+		);
+	};
 
-    if (!window.embedded_svc) {
-        var s = document.createElement('script');
-        s.setAttribute('src', 'https://cmfgroup--uat.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
-        s.onload = function() {
-            initESW(null);
-        };
-        document.body.appendChild(s);
-    } else {
-        initESW('https://service.force.com');
-    }
+	if (!window.embedded_svc) {
+		var s = document.createElement('script');
+		s.setAttribute('src', 'https://cmfgroup--uat.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.onload = function() {
+			initESW(null);
+		};
+		document.body.appendChild(s);
+	} else {
+		initESW('https://service.force.com');
+	}
 </script>
 </body>
