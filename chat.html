@@ -7,86 +7,64 @@
         padding: 0px;
       }
 
-    .embeddedServiceHelpButton .helpButton .uiButton {
-        background-color: #FF0F17;
-        /*font-family: "Arial", sans-serif;*/
-        /*overflow: unset !important;*/
-        box-shadow: none !important;    
-    }
-
-    .embeddedServiceHelpButton .uiButton {
-        min-width: unset;
-        max-width: unset;
-        width: 3.125rem !important;
-        height: 3.125rem !important;
-        border-radius: 50% !important;
-        padding: 0 1rem !important;
-    }
-    
-    .embeddedServiceHelpButton .helpButton {
-        bottom: 0.75rem !important;
-        right: 1rem !important;
-    }
-
-    .embeddedServiceHelpButton .helpButton .helpButtonEnabled:hover::before,
-    .embeddedServiceHelpButton .helpButton .helpButtonEnabled:focus::before {
-        border-radius: unset;
-        background-color: unset;
-        opacity: unset;
-    }
-
-    .embeddedServiceHelpButton .embeddedServiceIcon {
-        display: inline-block !important;
-    }
-
-    .salesforceIdentityLoginBody2 .ui-widget {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-    }
-
-    .embeddedServiceSidebarMinimizedDefaultUI.minimizedContainer:hover,
-    .embeddedServiceSidebarMinimizedDefaultUI.minimizedContainer:focus {
-        background-color: #FF0F17 !important;
-    }
-
-    .embeddedServiceSidebarMinimizedDefaultUI .content {
-        position: absolute;
-        top: -3.75rem;
-        right: 1.375rem;
-        background-color: white !important;
-        border-radius: 0.1875rem;
-        box-shadow: 0 0 0.3125rem 0.3125rem rgba(0, 0, 0, 0.1);
-    }
-
-    .embeddedServiceSidebarMinimizedDefaultUI .message {
-        color: #2a3541;
-        font-family: 'Museo Sans';
-        font-weight: 600;
-        width: max-content !important;
-    }
-
-    .embeddedServiceSidebarMinimizedDefaultUI,
-    .forceCommunityEmbeddedServiceHelpButton .flatButton {
-        font-family: "Arial", sans-serif;
-        width: 3.125rem !important;
-        height: 3.125rem !important;
-        border-radius: 50% !important;
-        padding: 0 1rem !important;
-    }
-
-    .embeddedServiceSidebarMinimizedDefaultUI {
-        min-height: unset !important;
+      .embeddedServiceHelpButton .helpButton .uiButton {
         min-width: unset !important;
-        border: 0;
-        bottom: 0.75rem !important;
-        overflow: unset !important;
-        box-shadow: none !important;
-        background-color: #FF0F17 !important;
-    }
+        max-width: unset !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-decoration: none !important;
+        text-align: center !important;
+        padding: 15px 40px !important;
+        letter-spacing: .1em !important;
+        border-radius: 8px 8px 0 0 !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
+        height: 46px !important;
+        line-height: 1 !important;
+        font-size: 1em !important;
+        color: #fff !important;
+        font-weight: normal !important;
+        text-shadow: none !important;
+        font-family: inherit !important;
+        background: red !important;
+        border: none !important;
+        text-transform: UPPERCASE !important;
+      }
 
-    .forceCommunityEmbeddedServiceHelpButton .flatButton {
-        background-color: #FF0F17 !important;
-    }
+      .embeddedServiceHelpButton .helpButton {
+        position: fixed !important;
+        bottom: 0px !important;
+        right: 12px !important;
+        height: 46px !important;
+        -webkit-font-smoothing: subpixel-antialiased !important;
+      }
+
+      .embeddedServiceSidebarMinimizedDefaultUI {
+        background-color: red !important;
+        border: none !important;
+        bottom: 0px !important;
+        position: fixed !important;
+        height: 46px !important;
+        width: 250px !important;
+      }
+
+      .embeddedServiceSidebarMinimizedDefaultUI:hover {
+        background-color: red !important;
+        border: none !important;
+      }
+
+      .embeddedServiceHelpButton .helpButton .helpButtonEnabled:hover::before,
+      .embeddedServiceHelpButton .helpButton .helpButtonEnabled:focus::before {
+        border-radius: 8px !important;
+      }
+
+      .embeddedServiceSidebar.sidebarMaximized {
+        background: rgb(51 51 51 / 0%) !important;
+        position: fixed !important;
+        bottom: 0px !important;
+        min-width: unset !important;
+      }
 
       .dockableContainer.showDockableContainer {
         height: 100% !important;
