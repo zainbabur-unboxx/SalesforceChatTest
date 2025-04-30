@@ -239,15 +239,14 @@
             window.addEventListener("onEmbeddedMessagingButtonClicked", handleChatStart);
             window.addEventListener("onEmbeddedMessagingConversationOpened", handleChatStart);
 
-
 	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
 			embeddedservice_bootstrap.init(
 				'00D7i000000XeuW',
-				'AgentForce',
-				'https://cmfgroup--syfiedev2.sandbox.my.site.com/ESWAgentForce1735222522406',
+				'Agentforce_Test_External',
+				'https://cmfgroup--syfiedev2.sandbox.my.site.com/ESWAgentforceTestExtern1744726153455',
 				{
 					scrt2URL: 'https://cmfgroup--syfiedev2.sandbox.my.salesforce-scrt.com'
 				}
@@ -257,7 +256,7 @@
 		}
 	};
 </script>
-<script type='text/javascript' src='https://cmfgroup--syfiedev2.sandbox.my.site.com/ESWAgentForce1735222522406/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+<script type='text/javascript' src='https://cmfgroup--syfiedev2.sandbox.my.site.com/ESWAgentforceTestExtern1744726153455/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
     </body>
 </html>
